@@ -4,8 +4,8 @@ section .text
 
 ft_putstr:
 	mov rdx, 0 ; init
-conut_length:
-	cmp bytes [rdi + rdx], 0 ; just compare with the end of the string '0'
+count_length:
+	cmp byte[rdi + rdx], 0 ; just compare with the end of the string '0'
 	je write_string
 	inc rdx
 	jmp count_length
