@@ -9,10 +9,11 @@ strjoin:
 	; Align stack (System V ABI requires 16-byte alignment)
 	sub rsp, 8
 
-	mov r8, rdi	
+	mov r8, rdi
 	mov r9, rsi
 	push r8
 	push r9
+
 	mov rdi, r8
 	call strlen
 	mov rdx, rax
